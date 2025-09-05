@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exam Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 18px;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .exam-details {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      width: 420px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      max-height: none;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      color: #2c3e50;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    ul li span {
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    input[type="text"] {
+      padding: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-left: 8px;
+      background: #fff;
+    }
+
+    .btn-wrap {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    button:first-child {
+      background: #7f8c8d;
+      color: #fff;
+    }
+
+    button:first-child:hover {
+      background: #95a5a6;
+    }
+
+    button:last-child {
+      background: #3498db;
+      color: #fff;
+    }
+
+    button:last-child:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="exam-details">
+    <h2>I. Student Info</h2>
+    <ul>
+      <li>Name: <span id="studName"></span></li>
+      <li>Gender: <span id="studGender"></span></li>
+      <li>School: <span id="studSchool"></span></li>
+      <li>Class: <span id="studClass"></span></li>
+      <li>Tel: <span id="studTel"></span></li>
+    </ul>
+
+    <h2>II. Exam Info</h2>
+    <ul>
+      <li>Name of Exam: <span id="examName"></span></li>
+      <li>Subject: <span id="subject"></span></li>
+      <li>Duration: <span id="duration"></span></li>
+      <li>Number of Questions: <span id="noq"></span></li>
+    </ul>
+
+    <h2>III. Score</h2>
+    <ul>
+      <li>Total Questions Attempted: <span id="questionsAttempted"></span></li>
+      <li>Questions Passed: <span id="questionsPassed"></span></li>
+      <li>Questions Failed: <span id="questionsFailed"></span></li>
+      <li>Percentage Passed: <span id="percentagePassed"></span></li>
+      <li>Remark <input type="text" id="remark" value=""></li>
+    </ul>
+
+    <div class="btn-wrap">
+      <button type="button">Close</button>
+      <button type="button">Download</button>
+    </div>
+  </div>
+</body>
+</html>

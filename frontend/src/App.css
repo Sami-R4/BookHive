@@ -1,1 +1,10 @@
 @import 'tailwindcss';
+
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --color-primary-blue: #3B82F6;
+  --color-secondary-blue: #000068;
+  --color-accent-gold: #FCD34D;
+  --color-pure-gold: gold;
+}

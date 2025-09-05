@@ -1,9 +1,11 @@
-import './App.css'
+import './App.css';
+// Components
+import Home from './pages/Home';
 
 function App() {
-  return(
-    <div class="text-2xl text-blue-400">Hello World</div>
-  )
+  return (
+    <Home/>
+  );
 }
 
-export default App
+export default App;

@@ -1,68 +1,105 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Visitor Font */
+@font-face {
+  font-family: "Manrope";
+  src: url('./assets/fonts/MANROPE-VARIABLEFONT_WGHT.TTF');
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Dashboard Font */
+@font-face {
+  font-family: "Rubik";
+  src: url('./assets/fonts/RUBIK-VARIABLEFONT_WGHT.TTF');
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@theme {
+  --font-manrope: "Manrope", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
+  --color-primary-blue: #3B82F6;
+  --color-secondary-blue: #000068;
+  --color-accent-gold: #FCD34D;
+  --color-pure-gold: gold;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Navbar */
+.text-shadow-gold{
+    text-shadow: 2px 2px 8px #FCD34D;
+}
+.gold-shadow:hover{
+    box-shadow: 0 2px 12px 5px gold
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+/* Navlinks */
+.navlink{
+    position: relative;
+    display: inline;
 }
-button:hover {
-  border-color: #646cff;
+.navlink:hover{
+    color: var(--color-accent-gold);
+    text-shadow: 0 0 8px, 0 0 12px gold;
+    font-weight: 600;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.navlink::before,
+.navlink::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: gold;
+    transition: all 0.3s ease;
+}
+.navlink::before{
+    top: 0;
+    transform: translateX(-50%);
+}
+.navlink::after{
+    bottom: -5px;
+    transform: translateX(-50%);
+}
+.navlink:hover::before,
+.navlink:hover::after{
+    width: 100%;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Mobile Navbar */
+.navlink-mobile{
+    position: relative;
+    display: inline;
+}
+.navlink-mobile:hover{
+    color: var(--color-accent-gold);
+}
+.navlink-mobile::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transform: translateX(0%);
+    background-color: var(--color-accent-gold);
+}
+.navlink-mobile:hover::after{
+    width: 100%;
+}
+
+/* Home hero */
+.home-hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("assets/img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.search-btn{
+    font-size: 10px;
+    background: var(--color-primary-blue);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
