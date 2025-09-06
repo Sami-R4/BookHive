@@ -36,7 +36,7 @@ export default function NewBooks(){
     ]
     return(
         <div className="mt-15">
-            <h2 className="ml-19 text-3xl new-rel font-semibold" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">New Releases</h2>
+            <h2 className="ml-19 text-3xl new-rel font-semibold" data-aos="fade-right">New Releases</h2>
             <div className="flex flex-wrap justify-center gap-6 mt-5">
                 {books.map((book, index) => (
                     <BookCard

@@ -7,7 +7,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="relative bg-secondary-blue font-manrope">
+    <nav className="relative bg-secondary-blue font-manrope py-2">
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center p-4 text-white">
         <h2 className="font-bold text-4xl text-shadow-gold mr-auto cursor-pointer">
@@ -20,12 +20,12 @@ export default function Navbar() {
         </ul>
         <div className="ml-auto flex items-center gap-4">
           <a href="../pages/login.php">
-            <button className="login-btn rounded-md border-2 border-accent-gold py-1 px-3 hover:bg-accent-gold hover:text-gray-900 transition">
+            <button className="login-btn rounded-md border-2 border-accent-gold py-2 px-3 text-white hover:bg-accent-gold hover:text-gray-900 cursor-pointer">
               Login
             </button>
           </a>
           <a href="../pages/register.php">
-            <button className="start-btn rounded-md bg-accent-gold py-1 px-3 text-gray-900 hover:scale-105 transition transform">
+            <button className="start-btn rounded-md bg-accent-gold py-2 px-3 text-gray-900 hover:scale-105 transition transform gold-shadow cursor-pointer border-2 border-accent-gold">
               Get Started
             </button>
           </a>

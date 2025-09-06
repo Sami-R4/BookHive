@@ -8,7 +8,7 @@ export default function BookCard({title, author, cover, price, tag, dataAosDelay
     AOS.init();
   },[])
   return (
-    <div className="bg-white rounded-md box-shadow overflow-hidden w-full max-w-sm transform transition-transform duration-200 hover:scale-101 hover:shadow-2xl my-7" data-aos="flip-left" data-aos-duration="1000" data-aos-delay={dataAosDelay}>
+    <div className="bg-white rounded-md box-shadow overflow-hidden w-full max-w-sm transform transition-transform duration-200 hover:shadow-2xl my-7" data-aos="flip-left" data-aos-duration="1000" data-aos-delay={dataAosDelay}>
       
       {/* Book cover */}
       <div className="relative h-65 w-full overflow-hidden">
